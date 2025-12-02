@@ -1,0 +1,11 @@
+{
+  "name": "hidenari/function-sample",
+  "description": "function sample",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Hidenari\\FunctionSample\\": "src/"
+    }
+  },
+  "require": {}
+}
