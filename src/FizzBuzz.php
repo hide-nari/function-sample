@@ -1,5 +1,5 @@
 <?php
-
+namespace Hidenari\FunctionSample;
 function fizzBuzz(int $number): int|string
 {
     return match (true) {
