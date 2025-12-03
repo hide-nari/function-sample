@@ -1,16 +1,11 @@
 {
-  "name": "hidenari/function-sample",
-  "description": "util function",
+  "name": "hidenari/helper-sample",
+  "description": "helper function sample",
   "license": "MIT",
   "type": "library",
   "autoload": {
     "files": [
       "src/helper.php"
-    ],
-    "psr-4": {
-      "Hidenari\\FunctionSample\\": "src/"
-    }
-  },
-  "require": {
+    ]
   }
 }
