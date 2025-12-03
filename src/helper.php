@@ -1,6 +1,6 @@
 <?php
 
-namespace Hidenari\FunctionSample;
+namespace Hidenari\HelperSample;
 
 function fizzBuzz(int $number): int|string
 {
