@@ -4,6 +4,9 @@
   "license": "MIT",
   "type": "library",
   "autoload": {
+    "files": [
+      "src/util.php"
+    ],
     "psr-4": {
       "Hidenari\\FunctionSample\\": "src/"
     }
