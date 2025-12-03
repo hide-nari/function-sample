@@ -5,7 +5,7 @@
   "type": "library",
   "autoload": {
     "files": [
-      "src/util.php"
+      "src/helper.php"
     ],
     "psr-4": {
       "Hidenari\\FunctionSample\\": "src/"
