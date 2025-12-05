@@ -7,6 +7,11 @@ test('helper file fizzBuzz function test int pattern',
         expect(fizzBuzz($args) === $result)->toBeTrue();
     })
     ->with([
+        ["-15", "fizzbuzz"],
+        ["-5", "buzz"],
+        ["-3", "fizz"],
+        ["-2", -2],
+        ["-1", -1],
         ["0", "fizzbuzz"],
         ["1", 1],
         ["2", 2],
@@ -30,6 +35,11 @@ test('helper file fizzBuzz function test float pattern',
         expect(fizzBuzz($args) === $result)->toBeTrue();
     })
     ->with([
+        ["-15.1", 'fizzbuzz'],
+        ["-5.1", 'buzz'],
+        ["-3.1", 'fizz'],
+        ["-2.1", -2],
+        ["-1.1", -1],
         ["0.0", 'fizzbuzz'],
         ["1.0", 1],
         ["1.1", 1],
