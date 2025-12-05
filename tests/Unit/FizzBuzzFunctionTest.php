@@ -35,14 +35,20 @@ test('helper file fizzBuzz function test float pattern',
     ["3.1", "fizz"],
 ]);
 
-test('helper file fizzBuzz function test null boolean string pattern',
-    function (null|bool|string $args, string $result) {
-        expect(fizzBuzz($args) === $result)->toBeTrue();
+test('helper file fizzBuzz function test bool error pattern',
+    function (bool $args) {
+        fizzBuzz($args);
     })->with([
-    [null, "not a number"],
-    [true, "not a number"],
-    [false, "not a number"],
-    ["true", "not a number"],
-    ["false", "not a number"],
-    ["str", "not a number"],
-]);
+    [true],
+    [false],
+])->throws(TypeError::class,"bool type error");
+
+test('helper file fizzBuzz function test null string error pattern',
+    function (null|string $args) {
+        fizzBuzz($args);
+    })->with([
+    [null],
+    ["str"],
+    [1,2,3],
+    new stdClass(),
+])->throws(TypeError::class);

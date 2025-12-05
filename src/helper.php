@@ -2,10 +2,10 @@
 
 namespace Hidenari\HelperSample;
 
-function fizzBuzz(int|float|bool|null $number): int|string
+function fizzBuzz(int|float|bool $number): int|string
 {
-    if (is_null($number) || is_bool($number)) {
-        return 'not a number';
+    if (is_bool($number)) {
+        throw new \TypeError("bool type error");
     }
 
     return match (true) {
