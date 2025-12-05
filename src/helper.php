@@ -5,7 +5,7 @@ namespace Hidenari\HelperSample;
 function fizzBuzz(int|float|bool $number): int|string
 {
     if (is_bool($number)) {
-        throw new \TypeError("bool type error");
+        throw new \TypeError('bool type error');
     }
 
     return match (true) {
