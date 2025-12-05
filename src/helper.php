@@ -2,12 +2,16 @@
 
 namespace Hidenari\HelperSample;
 
-function fizzBuzz(int|float $number): int|string
+function fizzBuzz(int|float|null|bool $number): int|string
 {
+    if (is_null($number) || is_bool($number)) {
+        return 'not a number';
+    }
+
     return match (true) {
-        (int)$number % 15 === 0 => 'fizzbuzz',
-        (int)$number % 3 === 0 => 'fizz',
-        (int)$number % 5 === 0 => 'buzz',
-        default => (int)$number,
+        (int) $number % 15 === 0 => 'fizzbuzz',
+        (int) $number % 3 === 0 => 'fizz',
+        (int) $number % 5 === 0 => 'buzz',
+        default => (int) $number,
     };
 }
