@@ -60,13 +60,13 @@ test('helper file fizzBuzz function test bool error pattern',
     ->throws(TypeError::class, "bool type error");
 
 test('helper file fizzBuzz function test null string error pattern',
-    function (null|string $args) {
+    function (null|string|array $args) {
         fizzBuzz($args);
     })
     ->with([
         [null],
         ["str"],
-        [1, 2, 3],
+        [[1, 2, 3]],
         new stdClass(),
     ])
     ->throws(TypeError::class);
