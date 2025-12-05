@@ -3,8 +3,8 @@
 use function Hidenari\HelperSample\fizzBuzz;
 
 test('fizzBuzz function test with parameter',
-    function (string $key, int|string $value) {
-        expect(fizzBuzz($key) === $value)->toBeTrue();
+    function (string $args, int|string $result) {
+        expect(fizzBuzz($args) === $result)->toBeTrue();
     })->with([
     ["1", 1],
     ["2", 2],
