@@ -68,5 +68,10 @@ test('helper file fizzBuzz function test null string error pattern',
         ['str'],
         [[1, 2, 3]],
         new stdClass,
+        (object) ['name' => 'taro'],
+        new class
+        {
+            public $name = 'taro';
+        },
     ])
     ->throws(TypeError::class);
